@@ -115,7 +115,7 @@ function init {
 
     echo "[INFO] Initializing repository."
     # forces yes to the anoying color output prompt
-    yes | repo init -u $LINEAGEOS_REPO --depth 1 -b $LINEAGEOS_BRANCH
+    yes | repo init -u $LINEAGEOS_REPO --depth=1 -b $LINEAGEOS_BRANCH
     # download repo
     repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 
