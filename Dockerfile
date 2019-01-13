@@ -97,6 +97,7 @@ COPY default.env init.sh /etc/profile.d/
 COPY lineageos /bin
 # copy dir with several PRed device configurations
 COPY device-config $DEVICE_CONFIGS_DIR
+RUN chown -R lineageos.lineageos /home/lineageos
 
 # set volume and user home folder
 USER $USER
